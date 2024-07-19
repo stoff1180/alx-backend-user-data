@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-    A Database class
+    DB class
 """
 
 from sqlalchemy import create_engine
