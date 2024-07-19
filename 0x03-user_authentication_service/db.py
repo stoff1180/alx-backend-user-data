@@ -32,12 +32,6 @@ class DB:
 
     def add_user(self, email: str, hashed_password: str) -> User:
         """add user to database
-
-        Args:
-            email (string): email of user
-            hashed_password (string): password of user
-        Returns:
-            User: user created
         """
         if not email or not hashed_password:
             return
@@ -49,9 +43,6 @@ class DB:
 
     def find_user_by(self, **kwargs) -> User:
         """find user by some arguments
-
-        Returns:
-            User: user found or raise error
         """
         user = self._session.query(User).filter_by(**kwargs).first()
         if not user:
